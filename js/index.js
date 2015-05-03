@@ -41,7 +41,7 @@ function gotoWedding(){
     $(".inforPart").fadeIn();
     $("#gohome-span").css("display","inline-block");
 
-    $("#mapContainer").width($(".inforPart").width() - $(".leftDiv").width() - 15);
+    $("#mapContainer").width($(".inforPart").width() - $(".leftDiv").width() - 20);
 }
 
 function gotoHome(){
