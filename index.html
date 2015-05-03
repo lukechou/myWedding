@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/inforPart.css">
+    <link rel="stylesheet" type="text/css" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css">
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <script type="text/javascript" src="js/inforPart.js"></script>
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <title>我们结婚啦！</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left pull-left">
+            <a href="javascript:gotoHome();"> <img src="img/couple_header.jpg" class="img-circle pull-left"></a>
+            <a class="wedTitle" href="javascript:gotoHome();">
+                <p>我是赵升,我是谢仁宁，我们结婚了&nbsp;&nbsp;<span id="gohome-span" style="display: none"><img src="img/back.jpg"><b>返回主页</b></span></p>
+                <p>I'm Sheng Zhao,I'm RenNing Xie,we are married!</p>
+            </a>
+        </div>
+        <div class="header-right pull-right">
+                <p>浪漫婚纱</p>
+                <p>About our wedding.</p>
+        </div>
+    </div>
+    <div class="container" style=" ">
+        <div class="container-list" style="border-radius: 10px">
+            <div class="img-list">
+                <ul>
+                    <li><img src="img/img1.jpg" ></li>
+                    <li><img src="img/img2.jpg" ></li>
+                    <li><img src="img/img3.jpg" ></li>
+                    <li><img src="img/img4.jpg" ></li>
+                    <li><img src="img/img5.jpg" ></li>
+                    <li><img src="img/img6.jpg" ></li>
+                    <li><img src="img/img7.jpg" ></li>
+                    <li><img src="img/img8.jpg" ></li>
+                    <li><img src="img/img9.jpg" ></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="cutImgDiv">
+            <ol class="cutImgOl">
+                <li class="cutImgLi active"  id ="cutImg-1">1</li>
+                <li class="cutImgLi"  id ="cutImg-2">2</li>
+                <li class="cutImgLi"  id ="cutImg-3">3</li>
+                <li class="cutImgLi"  id ="cutImg-4">4</li>
+                <li class="cutImgLi"  id ="cutImg-5">5</li>
+                <li class="cutImgLi"  id ="cutImg-6">6</li>
+                <li class="cutImgLi"  id ="cutImg-7">7</li>
+                <li class="cutImgLi"  id ="cutImg-8">8</li>
+                <li class="cutImgLi"  id ="cutImg-9">9</li>
+            </ol>
+        </div>
+        <a class="img-control left" id = "img-control-left" href="javascript:cutImgToLeft();">
+            <
+        </a>
+        <a class="img-control right"id = "img-control-right" href="javascript:cutImgToRight();">
+            >
+        </a>
+        <div class="backgoundMusic">
+            <!--这里只能放一首歌，可以放几个格式的同首歌，便于在不同的浏览器中识别，建议是MP3+WAV格式-->
+            <audio controls  loop onvolumechange autoplay id="audio1">
+                <source src="music/let%20us%20marry%20small.mp3.mp3" type="audio/mp3">
+                <source src="music/let%20us%20marry%20big.mp3" type="audio/mp3">
+                <source src="music/let%20us%20marry%20low%20quality.wav" type="audio/wav">
+                您的浏览器不支持最新音频播放，请更新浏览器版本好吗亲？
+            </audio>
+        </div>
+        <div class="img-inner-div">
+            <p style="font-size: 20px;letter-spacing: 2px">我是赵升;我是谢仁宁</p>
+            <h2 style="font-size: 24px;margin: 20px 0 20px;letter-spacing: 2px;">我们结婚了哦……</h2>
+            <p style="padding: 10px 16px; background-color: #5cb85c;border-radius: 6px"><a class="btn-gotowedding" href="javascript:gotoWedding();">欢迎参加我们的婚礼:)</a></p>
+        </div>
+    </div>
+    <div class="inforPart" style="height: 640px;display: none">
+        <div class="leftDiv">
+            <div class="wedInfor">
+                <h2 style="font-family: Fantasy,'楷体' !important;">Wedding Invitation &nbsp;&nbsp;婚礼邀请</h2>
+                <p>新郎：赵升&nbsp;&nbsp;新娘：谢仁宁</p>
+                <h2>您的祝福与光临，将是我们最大的荣耀</h2>
+                <p style="color: green">2015年05月10日</p>
+                <p style="color: green">河南省南阳市宛城区独山大道与新华路口向北100米路西旺府扁食馆
+                </p>
+            </div>
+            <div class="wishes" style="overflow: auto;font-family: '微软雅黑'">
+                <p>恭喜你找到你的Mr.right，并成功步入婚姻的殿堂！愿你们今后的生活都如今天般洋溢幸福~<span>&nbsp;&nbsp;&nbsp;from 秀芝姐</span></p>
+                <p>新婚愉快，百年好合！早生贵子！多生多养，为祖国多培养几个好少（xue）年（ba）！
+                    <span>&nbsp;&nbsp;&nbsp;from 胖子</span></p>
+                <p>浪漫的婚礼，艳丽的玫瑰，这是一场美满的婚姻，祝白头偕老、相爱永远！<span>from 某某某</span></p>
+                <p>浪漫的婚礼，艳丽的玫瑰，这是一场美满的婚姻，祝白头偕老、相爱永远！<span>from 某某某</span></p>
+
+                <!--<div class="wishes_write">-->
+                    <!--<textarea class="wishes_words" maxlength="100">快来送上你的祝福吧……</textarea>-->
+                    <!--from-->
+                    <!--<input type="text" class="name">-->
+                    <!--<input type="button" value="send" onclick="javascript:sendWishes();">-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="rightDiv" id="mapContainer">
+        </div>
+    </div>
+
+    <div class="foot">
+        <div id="foot-container">
+            <div id = "happyWords">
+                <p>
+                    从明天起，做一个幸福的人；喂马、劈柴，周游世界<br>
+                    从明天起，关心粮食和蔬菜；我有一所房子，面朝大海，春暖花开
+                </p>
+                <p>
+                    从明天起，和每一个亲人通信；告诉他们我的幸福；那幸福的闪电告诉我的；我将告诉每一个人
+                </p>
+                <p>
+                    给每一条河每一座山取一个温暖的名字；陌生人，我也为你祝福；<br>
+                    愿你有一个灿烂的前程；愿你有情人终成眷属；愿你在尘世获得幸福
+                </p>
+                <p>
+                    我只愿面朝大海，春暖花开
+                </p>
+                 </div>
+                <div id="foot-img">
+                    <img src="img/2dim.png">
+                </div>
+        </div>
+
+    </div>
+</body>
+</html>

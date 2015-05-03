@@ -1,0 +1,39 @@
+.leftDiv{
+    width: 47%;
+    height: 640px;
+    overflow: auto;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 10px;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+.leftDiv p{
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+.wedInfor {
+    text-align: center;
+    color: red;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "楷体", fantasy, sans-serif;
+}
+.wishes{
+    margin: 30px 20px 10px;
+    font-size: 17px;
+    font-family: "楷体",fantasy, sans-serif;
+}
+.wishes p {
+    line-height: 30px;
+}
+#mapContainer{
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    /*width: 711px;*/
+    height: 640px;
+}
+
+
