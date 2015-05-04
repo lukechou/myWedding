@@ -10,6 +10,8 @@
 }
 .header p {
     line-height: 25px;
+    font-size:18px ;
+    font:bold;
 }
 .pull-left{
     float:left;
@@ -146,16 +148,16 @@ a.img-control{
     overflow: hidden;
 }
 #foot-container{
-    margin: 10px auto;
+    margin: 20px auto;
     width: 100%;
 }
-#happyWords{
+#happyWords,#happyWords2{
     float: left;
     width:70%;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 25px;
+    margin-right: 10px;
 }
-#happyWords p{
+#happyWords p,#happyWords2 p{
     font-size: 22px;
     font-weight: bold;
     line-height: 30px;

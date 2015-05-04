@@ -3,8 +3,8 @@
  */
  function drawMap(){
     var map = new BMap.Map("mapContainer");
-    var point = new BMap.Point(112.5453,33.0307);
-    var centerPoint = new BMap.Point(112.516108,33.050286);
+    var point = new BMap.Point(112.572853,33.002176);
+    var centerPoint = new BMap.Point(112.551774,33.014474);
     map.centerAndZoom(centerPoint,15);
     map.enableScrollWheelZoom();    //启用滚轮放大缩小，默认禁用
     map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
@@ -16,13 +16,12 @@
 
     var marker = new BMap.Marker(point);  // 创建标注，为要查询的地方对应的经纬度
     var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
-        '<img src="img/2dim.png" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
-        '地址：北京市海淀区上地十街10号<br/>电话：(010)59928888<br/>简介：百度大厦位于北京市海淀区西二旗地铁站附近，为百度公司综合研发及办公总部。' +
-        '</div>';
+        '<img src="img/wangfu.jpg" alt="" style="float:left;zoom:1;overflow:hidden;width:100px;height:100px;margin-right:3px;"/>' +
+        '地址:医圣祠街与独山大道中段交叉口南118米路西<br>电话：(0377)61168666<br>中餐馆</div>';
     //创建检索信息窗口对象
     var searchInfoWindow = null;
     searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
-        title  : "凯悦国际",      //标题
+        title  : "旺府酒店",      //标题
         width  : 290,             //宽度
         height : 105,              //高度
         panel  : "panel",         //检索结果面板

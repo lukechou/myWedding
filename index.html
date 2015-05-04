@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/inforPart.css">
     <link rel="stylesheet" type="text/css" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css">
@@ -11,6 +12,7 @@
     <script type="text/javascript" src="js/inforPart.js"></script>
     <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/wishes.js" type="text/javascript"></script>
     <title>我们结婚啦！</title>
 </head>
 <body>
@@ -24,7 +26,7 @@
         </div>
         <div class="header-right pull-right">
                 <p>浪漫婚纱</p>
-                <p>About our wedding.</p>
+                <p>Romantic Wedding dress.</p>
         </div>
     </div>
     <div class="container" style=" ">
@@ -35,10 +37,10 @@
                     <li><img src="img/img2.jpg" ></li>
                     <li><img src="img/img3.jpg" ></li>
                     <li><img src="img/img4.jpg" ></li>
-                    <li><img src="img/img5.jpg" ></li>
+
                     <li><img src="img/img6.jpg" ></li>
                     <li><img src="img/img7.jpg" ></li>
-                    <li><img src="img/img8.jpg" ></li>
+
                     <li><img src="img/img9.jpg" ></li>
                 </ul>
 
@@ -54,8 +56,6 @@
                 <li class="cutImgLi"  id ="cutImg-5">5</li>
                 <li class="cutImgLi"  id ="cutImg-6">6</li>
                 <li class="cutImgLi"  id ="cutImg-7">7</li>
-                <li class="cutImgLi"  id ="cutImg-8">8</li>
-                <li class="cutImgLi"  id ="cutImg-9">9</li>
             </ol>
         </div>
         <a class="img-control left" id = "img-control-left" href="javascript:cutImgToLeft();">
@@ -75,33 +75,21 @@
         </div>
         <div class="img-inner-div">
             <p style="font-size: 20px;letter-spacing: 2px">我是赵升;我是谢仁宁</p>
-            <h2 style="font-size: 24px;margin: 20px 0 20px;letter-spacing: 2px;">我们结婚了哦……</h2>
+            <h2 style="font-size: 24px;margin: 20px 0 20px;letter-spacing: 2px;">我们结婚了……</h2>
             <p style="padding: 10px 16px; background-color: #5cb85c;border-radius: 6px"><a class="btn-gotowedding" href="javascript:gotoWedding();">欢迎参加婚礼（点击详情)</a></p>
         </div>
     </div>
     <div class="inforPart" style="height: 640px;display: none">
         <div class="leftDiv">
             <div class="wedInfor">
-                <h2 style="font-family: Fantasy,'楷体' !important;">Wedding Invitation &nbsp;&nbsp;婚礼邀请</h2>
-                <p>新郎：赵升&nbsp;&nbsp;新娘：谢仁宁</p>
-                <h2>您的祝福与光临，将是我们最大的荣耀</h2>
+                <h2 style="font-family: Fantasy,'楷体' !important;">Wedding Information &nbsp;&nbsp;婚礼详情</h2>
+                <p style="color: green">新郎：赵升&nbsp;&nbsp;新娘：谢仁宁</p>
                 <p style="color: green">2015年05月10日</p>
-                <p style="color: green">河南省南阳市宛城区独山大道与新华路口向北100米路西旺府扁食馆
+                <p style="color: green">河南省南阳市宛城区独山大道与新华路口向北100米路西旺府酒店
                 </p>
+                <h2>您的祝福和光临，是我们最大的荣耀</h2>
             </div>
             <div class="wishes" style="overflow: auto;font-family: '微软雅黑'">
-                <p>恭喜你找到你的Mr.right，并成功步入婚姻的殿堂！愿你们今后的生活都如今天般洋溢幸福~<span>&nbsp;&nbsp;&nbsp;from 秀芝姐</span></p>
-                <p>新婚愉快，百年好合！早生贵子！多生多养，为祖国多培养几个好少（xue）年（ba）！
-                    <span>&nbsp;&nbsp;&nbsp;from 胖子</span></p>
-                <p>浪漫的婚礼，艳丽的玫瑰，这是一场美满的婚姻，祝白头偕老、相爱永远！<span>from 某某某</span></p>
-                <p>浪漫的婚礼，艳丽的玫瑰，这是一场美满的婚姻，祝白头偕老、相爱永远！<span>from 某某某</span></p>
-
-                <!--<div class="wishes_write">-->
-                    <!--<textarea class="wishes_words" maxlength="100">快来送上你的祝福吧……</textarea>-->
-                    <!--from-->
-                    <!--<input type="text" class="name">-->
-                    <!--<input type="button" value="send" onclick="javascript:sendWishes();">-->
-                <!--</div>-->
             </div>
         </div>
         <div class="rightDiv" id="mapContainer">
@@ -110,7 +98,7 @@
 
     <div class="foot">
         <div id="foot-container">
-            <div id = "happyWords">
+            <div id = "happyWords" style="">
                 <p>
                     从明天起，做一个幸福的人；喂马、劈柴，周游世界<br>
                     从明天起，关心粮食和蔬菜；我有一所房子，面朝大海，春暖花开
@@ -126,9 +114,27 @@
                     我只愿面朝大海，春暖花开
                 </p>
                  </div>
-                <div id="foot-img">
-                    <img src="img/2dim.png">
-                </div>
+            <div id = "happyWords2" style="display: none">
+                <p>
+                    那一世，为了窥见你惊世的容颜，我在佛前求了五百年，只为一个遇见；<br>
+                    那一世，为了轻触你温柔的指尖，我旋转经纶亿万遍，只为这个信念；<br>
+                    那一世，纵使繁华似锦，弱水三千，终非我所念；
+                </p>
+                <p>
+                    这一世，我翻越十万大山，踏破长城万里，终于与你相见；<br>
+                    这一世，我散尽千百年的功德，想要一个因果，终于与你相恋；
+                </p>
+                <p>
+                    终于，就在这一年，这一天，我拥有了一切:我拥有了天地，拥有了你。<br>
+                    今生有你，是我此生最大的缘！
+                </p>
+                <p>
+                    谨以此诗献与宁宝宝和升哥
+                </p>
+            </div>
+            <div id="foot-img">
+                 <img src="img/2dim.jpg">
+            </div>
         </div>
 
     </div>

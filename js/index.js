@@ -30,6 +30,8 @@ window.onload = function () {
     }).trigger("mouseleave");
 
     drawMap();
+    displayWishes();
+
     document.getElementById("audio1").volume = 0.35;
     console.log(document.getElementById("audio1").volume);
 }
@@ -41,13 +43,20 @@ function gotoWedding(){
     $(".inforPart").fadeIn();
     $("#gohome-span").css("display","inline-block");
 
+    $("#happyWords").fadeOut();
+    $("#happyWords2").fadeIn();
+
     $("#mapContainer").width($(".inforPart").width() - $(".leftDiv").width() - 20);
+
 }
 
 function gotoHome(){
     $("#gohome-span").css("display","none");
     $(".container").fadeIn();
     $(".inforPart").fadeOut();
+
+    $("#happyWords").fadeIn();
+    $("#happyWords2").fadeOut();
 }
 
 function sendWishes(){
@@ -89,4 +98,15 @@ function cutImgToRight(){
     showImg(currentPage);
 }
 
-
+function displayWishes(){
+    var i;
+    var innerHtml='';
+    for(i = 0; i < wishes.length; i ++){
+        var words = wishes[i][0];
+        var name = wishes[i][1];
+        var p = "<p>"+words+"&nbsp;&nbsp;&nbsp;from&nbsp;&nbsp;<span style='color: mediumaquamarine; font-style: italic'>"+name+"</span></p>";
+        innerHtml += p;
+    }
+    $(".wishes").html(innerHtml);
+    //console.log($(".wishes"));
+}
