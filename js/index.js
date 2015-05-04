@@ -4,6 +4,10 @@
 var currentPage = 1;
 var pageCount;
 
+$(document).ready(function(){
+    alert("温馨提示: 1,请建议使用谷歌(Chrome)、火狐(Firefox)等高级浏览器，在电脑上访问；不建议使用IE浏览器，或在手机上访问. "+
+        "2,如果访问出错，比如提示404错误，可以发邮件至598199879@qq.com反映，我们将在第一时间修复。谢谢。");
+});
 window.onload = function () {
     pageCount = $(".img-list").find("li").length;
 
