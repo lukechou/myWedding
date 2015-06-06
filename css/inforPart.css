@@ -34,5 +34,88 @@
     /*width: 711px;*/
     height: 640px;
 }
-
-
+/*适合屏幕分辨率的宽度在480以下*/
+@media screen and (max-width: 480px) {
+    .leftDiv {
+        width: 100%;
+        height: 320px;
+        float:none;
+    }
+    .leftDiv p {
+        line-height: 10px;
+    }
+    .wedInfor{
+        font-size:11px ;
+    }
+    .wishes{
+        margin: 15px 10px 5px;
+        font-size: 8px;
+    }
+    .wishes p{
+        line-height: 12px;
+    }
+    #mapContainer{
+        height:320px;
+        /* width:100%;*/
+        width: 100% !important;
+        margin: 10px 15px;
+        float: none;
+    }
+}
+/*适合屏幕分辨率的宽度在480-640之间*/
+@media screen and (max-width: 640px) and (min-width: 480px) {
+    .leftDiv {
+        width: 100%;
+        height: 320px;
+        float:none;
+    }
+    .leftDiv p {
+        line-height: 12px;
+    }
+    .wedInfor{
+        font-size:11px ;
+    }
+    .wishes {
+        margin: 15px 10px 5px;
+        font-size: 10px;
+    }
+    .wishes p {
+        line-height: 15px;
+    }
+    #mapContainer{
+        height:320px;
+       /* width:100%;*/
+        width: 100% !important;
+        margin: 10px 15px;
+        float: none;
+    }
+}
+/*适合屏幕分辨率的宽度在640-800之间*/
+@media screen and (min-width: 640px) and (max-width: 800px){
+    .leftDiv {
+        width: 100%;
+        height: 350px;
+        float:none;
+    }
+    .leftDiv p {
+        line-height: 14px;
+    }
+    .wedInfor{
+        font-size:14px ;
+    }
+    .wishes {
+        margin: 15px 10px 5px;
+        font-size: 13px;
+    }
+    .wishes p {
+        line-height: 18px;
+    }
+    #mapContainer{
+        height:320px;
+        /* width:100%;*/
+        width: 100% !important;
+        margin: 10px 15px;
+        float: none;
+        display:block;
+    }
+}

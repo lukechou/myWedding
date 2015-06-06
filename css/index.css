@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+/*头部*/
 .header{
     margin: 0 auto;
    /* padding: 20px;*/
@@ -37,25 +38,54 @@
 a.wedTitle:hover,a.wedTitle:visited,a.wedTitle:link{
     text-decoration: none;
 }
-
+/*中间容器，主要是图片轮播*/
 .container {
     position: relative;
-    background-color: cadetblue;
     width: 100%;
+    /*height: 600px;*/
+    overflow: hidden;
+    background-color: #eee;
 }
 .container-list{
     position: relative;
-    margin: 0 auto;
+    /*display: inline-block;*/
     height: 600px;
     width: 1450px;
+    margin:0 auto;
     overflow: hidden;
-    /*border: 5px dashed yellow;*/
+
+}
+.img-list{
+    width:  30450px;
+    height: 600px;
+    position: absolute;
+}
+.img-list ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.img-list ul li{
+    display: inline-block;
+    width: 1450px;
+    height: 600px;
+    line-height: 600px;
+    float: left;
+}
+.img-list ul li a{
+    display: block;
+}
+.img-list img{
+    width:1450px;
+    height:600px;
 }
 .backgoundMusic{
     position: absolute;
     left: 10px;
     top: 20px;
 }
+/*图片中间的div，显示前往结婚详情的按钮*/
 .img-inner-div{
     position: absolute;
     right: 10px;
@@ -65,29 +95,50 @@ a.wedTitle:hover,a.wedTitle:visited,a.wedTitle:link{
     padding: 20px;
     border-radius: 8px;
 }
+.img-inner-div p{
+    font-size:20px;
+}
+#gotowedding_p{
+    padding: 10px 16px;
+    background-color: #5cb85c;
+    border-radius: 6px
+}
+.img-inner-div h2{
+    font-size:24px;
+    margin: 20px 0 20px;
+    letter-spacing: 2px;
+}
+
 .img-control{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 3px solid #FFF;
-    border-radius: 23px;
+    height:600px;
+    /*border: 3px solid #FFF;*/
+    /*display: inline-block;*/
     opacity: 0.5;
-    background: none repeat scroll 0% 0% #222;
-    color: #FFF;
-    font-size: 60px;
+    font-size: 90px;
     font-weight: 100;
-    line-height: 41px;
-    text-align: center;
+    line-height: 65px;
+    color: #FFF;
+    background-color: #ccc;
+    position: absolute;
 }
-.img-control.left{
-    top: 40%;
-    left: 15px;
+.img-control a{
+    margin: 280px auto;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: none no-repeat scroll 0% 0% #222;
 }
-.img-control.right{
-    top: 40%;
-    right: 15px;
+.img-control-left{
+    margin-right: 10px;
+    left:0;
+    top:0;
 }
-a.img-control{
+.img-control-right{
+    margin-left: 10px;
+    right:0;
+    top:0;
+}
+.img-control{
     text-decoration: none;
 }
 .btn-gotowedding{
@@ -95,30 +146,7 @@ a.img-control{
     border-color: #4cae4c;
     color: #ffffff;
     /*padding: 10px 16px;*/
-    font-size: 20px;
     line-height: 1.33;
-}
-.img-list{
-    width:  13050px;
-    height: 600px;
-
-    padding: 0;
-    position: absolute;
-}
-.img-list ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.img-list ul li{
-    /*display: inline-block;*/
-  /*  width:800px;
-    height: 600px;
-    line-height: 600px;*/
-    float: left;
-}
-.img-list ul li a{
-    display: block;
 }
 
 .cutImgDiv{
@@ -143,6 +171,7 @@ a.img-control{
 .cutImgDiv ol li.active{
     background-color: red;
 }
+/*底部*/
 .foot{
     width: 100%;
     overflow: hidden;
@@ -168,4 +197,221 @@ a.img-control{
     float: right;
     margin-right: 15px;
     width:25%;
+}
+/*适合屏幕分辨率的宽度在480px以下*/
+@media screen and (max-width: 480px){
+    .header p {
+        line-height: 10px;
+        font-size:6px ;
+        font:bold;
+    }
+    .img-circle{
+        width: 40px;
+        height:40px;
+    }
+    .container-list {
+        height: 300px;
+        width: 400px;
+    }
+    .img-list{
+        height: 300px;
+        width: 8400px;
+    }
+    .img-list ul li{
+        height: 300px;
+        width: 400px;
+        line-height: 300px;
+    }
+    .img-list img{
+        width:400px;
+        height:300px;
+    }
+    .img-control{
+        height:300px;
+        font-size: 45px;
+        font-weight: 100;
+        line-height: 32px;
+    }
+    .img-control a{
+        margin: 130px auto;
+    }
+
+    .cutImgDiv {
+        right: 150px;
+    }
+    /*图片中间的div，显示前往结婚详情的按钮*/
+    .img-inner-div{
+        bottom: 15px;
+        padding: 10px;
+    }
+    .img-inner-div p{
+        font-size:8px;
+    }
+    #gotowedding_p {
+        padding: 5px 8px;
+        border-radius: 3px;
+    }
+    .img-inner-div h2{
+        font-size:10px;
+        margin: 10px 0 10px;
+        letter-spacing: 1px;
+    }
+    /*底部的语句和二维码图片*/
+    #happyWords p,#happyWords2 p{
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 12px;
+        margin-bottom: 20px;
+        font-family: "楷体", fantasy, sans-serif;
+    }
+    #foot-img,#foot-img img{
+        width:75px;
+        height:75px;
+        float:right;
+    }
+}
+/*适合屏幕分辨率的宽度在480-640之间*/
+@media screen and (max-width: 640px) and (min-width: 480px){
+    .header p {
+        line-height: 12px;
+        font-size:9px ;
+        font:bold;
+    }
+    .img-circle{
+        width: 45px;
+        height:45px;
+    }
+    .container-list {
+        height: 300px;
+        width: 450px;
+    }
+    .img-list{
+        height: 300px;
+        width: 94500px;
+    }
+    .img-list ul li{
+        height: 300px;
+        width: 450px;
+        line-height: 300px;
+    }
+    .img-list img{
+        width:450px;
+        height:300px;
+    }
+    .img-control{
+        height:300px;
+        font-size: 50px;
+        font-weight: 100;
+        line-height: 35px;
+    }
+    .img-control a{
+        margin: 130px auto;
+    }
+
+    .cutImgDiv {
+        right: 170px;
+    }
+    /*图片中间的div，显示前往结婚详情的按钮*/
+    .img-inner-div{
+       bottom: 15px;
+       padding: 10px;
+    }
+    .img-inner-div p{
+        font-size:10px;
+    }
+    #gotowedding_p {
+        padding: 5px 8px;
+        border-radius: 3px;
+    }
+    .img-inner-div h2{
+        font-size:12px;
+        margin: 10px 0 10px;
+        letter-spacing: 1px;
+    }
+
+    #happyWords p,#happyWords2 p{
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 15px;
+        margin-bottom: 20px;
+        font-family: "楷体", fantasy, sans-serif;
+    }
+    #foot-img,#foot-img img{
+        width:80px;
+        height:80px;
+        float:right;
+    }
+}
+
+/*适合屏幕分辨率的宽度在640-800之间*/
+@media screen and (min-width: 640px) and (max-width: 800px){
+    .header p {
+        line-height: 14px;
+        font-size:10px ;
+        font:bold;
+    }
+    .img-circle{
+        width: 45px;
+        height:45px;
+    }
+    .container-list {
+        height: 350px;
+        width: 620px;
+    }
+    .img-list{
+        height: 350px;
+        width: 130200px;
+    }
+    .img-list ul li{
+        height: 350px;
+        width: 620px;
+        line-height: 350px;
+    }
+    .img-list img{
+        width:620px;
+        height:350px;
+    }
+    .img-control{
+        height: 350px;
+        font-size: 60px;
+        font-weight: 100;
+        line-height: 40px;
+    }
+    .img-control a{
+        margin: 160px auto;
+    }
+
+    .cutImgDiv {
+        right: 170px;
+    }
+    /*图片中间的div，显示前往结婚详情的按钮*/
+    .img-inner-div{
+        bottom: 15px;
+        padding: 10px;
+    }
+    .img-inner-div p{
+        font-size:13px;
+    }
+    #gotowedding_p {
+        padding: 7px 10px;
+        border-radius: 3px;
+    }
+    .img-inner-div h2{
+        font-size:14px;
+        margin: 10px 0 10px;
+        letter-spacing: 1px;
+    }
+
+    #happyWords p,#happyWords2 p{
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 17px;
+        margin-bottom: 20px;
+        font-family: "楷体", fantasy, sans-serif;
+    }
+    #foot-img,#foot-img img{
+        width:80px;
+        height:80px;
+        float:right;
+    }
 }

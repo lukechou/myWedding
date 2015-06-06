@@ -30,22 +30,17 @@
         </div>
     </div>
     <div class="container" style=" ">
-        <div class="container-list" style="border-radius: 10px">
+        <div class="container-list" style="">
             <div class="img-list">
                 <ul>
-                    <li><img src="img/img1.jpg" ></li>
                     <li><img src="img/img2.jpg" ></li>
                     <li><img src="img/img3.jpg" ></li>
                     <li><img src="img/img4.jpg" ></li>
-
                     <li><img src="img/img6.jpg" ></li>
                     <li><img src="img/img7.jpg" ></li>
-
                     <li><img src="img/img9.jpg" ></li>
                 </ul>
-
             </div>
-
         </div>
         <div class="cutImgDiv">
             <ol class="cutImgOl">
@@ -55,18 +50,18 @@
                 <li class="cutImgLi"  id ="cutImg-4">4</li>
                 <li class="cutImgLi"  id ="cutImg-5">5</li>
                 <li class="cutImgLi"  id ="cutImg-6">6</li>
-                <li class="cutImgLi"  id ="cutImg-7">7</li>
-            </ol>
+               </ol>
         </div>
-        <a class="img-control left" id = "img-control-left" href="javascript:cutImgToLeft();">
-            <
-        </a>
-        <a class="img-control right"id = "img-control-right" href="javascript:cutImgToRight();">
-            >
-        </a>
+        <div class="img-control img-control-left" onclick="javascript:cutImgToRight();">
+            <a><</a>
+        </div>
+
+        <div class="img-control img-control-right" onclick="javascript:cutImgToLeft();">
+            <a>></a>
+        </div>
         <div class="backgoundMusic">
             <!--这里只能放一首歌，可以放几个格式的同首歌，便于在不同的浏览器中识别，建议是MP3+WAV格式-->
-            <audio controls  loop onvolumechange autoplay id="audio1">
+            <audio controls  loop onvolumechange  id="audio1">
                 <source src="music/let%20us%20marry%20small.mp3.mp3" type="audio/mp3">
                 <source src="music/let%20us%20marry%20big.mp3" type="audio/mp3">
                 <source src="music/let%20us%20marry%20low%20quality.wav" type="audio/wav">
@@ -74,12 +69,12 @@
             </audio>
         </div>
         <div class="img-inner-div">
-            <p style="font-size: 20px;letter-spacing: 2px">我是赵升;我是谢仁宁</p>
-            <h2 style="font-size: 24px;margin: 20px 0 20px;letter-spacing: 2px;">我们结婚了……</h2>
-            <p style="padding: 10px 16px; background-color: #5cb85c;border-radius: 6px"><a class="btn-gotowedding" href="javascript:gotoWedding();">欢迎参加婚礼（点击详情)</a></p>
+            <p style="letter-spacing: 2px">我是赵升;我是谢仁宁</p>
+            <h2 style="">我们结婚了……</h2>
+            <p id="gotowedding_p" style=""><a class="btn-gotowedding" href="javascript:gotoWedding();">欢迎参加婚礼（点击详情)</a></p>
         </div>
     </div>
-    <div class="inforPart" style="height: 640px;display: none">
+    <div class="inforPart" style="display: none">
         <div class="leftDiv">
             <div class="wedInfor">
                 <h2 style="font-family: Fantasy,'楷体' !important;">Wedding Information &nbsp;&nbsp;婚礼详情</h2>
@@ -136,7 +131,6 @@
                  <img src="img/2dim.jpg">
             </div>
         </div>
-
     </div>
 </body>
 </html>
